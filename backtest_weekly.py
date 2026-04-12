@@ -55,12 +55,12 @@ class Config:
     atr_period:        int   = 10
 
     # Risk / exit
-    stop_atr_mult:     float = 1.5     # stop = 1.5 × ATR
+    stop_atr_mult:     float = 1.5     # stop = 1.5 × ATR (gunakan 2.5 untuk high-vol)
     stop_max_pct:      float = 0.05    # hard cap 5%
-    target_rr:         float = 2.0     # target = 2× stop
+    target_rr:         float = 1.5     # target = 1.5× stop  (was 2.0 → lebih banyak profit_target hits)
     risk_per_trade:    float = 0.01    # 1% equity
     heat_max:          float = 0.06    # max 6% portfolio at risk
-    time_stop_days:    int   = 7       # max hold 7 hari (~1.5 minggu)
+    time_stop_days:    int   = 10      # max hold 10 hari / 2 minggu  (was 7)
     trail_min_profit:  float = 0.03    # mulai trail setelah +3%
 
     # Sim
